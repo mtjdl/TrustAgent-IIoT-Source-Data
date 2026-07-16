@@ -4,6 +4,7 @@ title: "TrustAgent-IIoT source data and reproducibility package"
 type: dataset
 version: 1.0.0
 date-released: 2026-07-16
+doi: "10.5281/zenodo.21395799"
 abstract: >-
   Source data, executable calibrated simulation code, validation outputs, and
   reproducibility metadata associated with the TrustAgent-IIoT manuscript.

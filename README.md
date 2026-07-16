@@ -1,5 +1,7 @@
 # TrustAgent-IIoT source data and reproducibility package
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21395799.svg)](https://doi.org/10.5281/zenodo.21395799)
+
 This repository contains the source data, executable simulation code, validation outputs, and reproducibility metadata associated with the TrustAgent-IIoT manuscript.
 
 ## Scope
@@ -48,3 +50,7 @@ The repository uses a dual licence:
 - Python source files are licensed under the [MIT License](LICENSE-CODE).
 
 When reusing the package, cite the archived release described in [`CITATION.cff`](CITATION.cff).
+
+## Citation
+
+CHAI, T. (2026). *TrustAgent-IIoT source data and reproducibility package* (Version 1.0.0) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.21395799
