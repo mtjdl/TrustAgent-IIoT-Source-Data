@@ -1,0 +1,16 @@
+﻿test_id,precondition,expected,observed,pass
+TV01_ALLOW,"{""policy"":""allow""}",ALLOW,ALLOW,1
+TV02_DENY,"{""policy"":""deny""}",DENY,DENY,1
+TV03_REVIEW_APPROVE,"{""policy"":""review"",""review_result"":""approve""}",REVIEW_APPROVE,REVIEW_APPROVE,1
+TV04_REVIEW_REJECT,"{""policy"":""review"",""review_result"":""reject""}",REVIEW_REJECT,REVIEW_REJECT,1
+TV05_REVIEW_TIMEOUT,"{""policy"":""review"",""review_result"":""timeout""}",REVIEW_TIMEOUT,REVIEW_TIMEOUT,1
+TV06_NO_FEASIBLE_NODE,"{""feasible_nodes"":0}",NO_FEASIBLE_NODE,NO_FEASIBLE_NODE,1
+TV07_INSUFFICIENT_TRUST,"{""quorum"":2,""trusted_evidence"":1}",INSUFFICIENT_TRUSTED_EVIDENCE,INSUFFICIENT_TRUSTED_EVIDENCE,1
+TV08_ZERO_FUSION_WEIGHT,"{""fusion_weight_sum"":0.0}",ZERO_FUSION_WEIGHT,ZERO_FUSION_WEIGHT,1
+TV09_SIGNATURE_INVALID,"{""signature_valid"":false}",SIGNATURE_INVALID,SIGNATURE_INVALID,1
+TV10_MALFORMED,"{""well_formed"":false}",LATE_OR_MALFORMED_EVIDENCE,LATE_OR_MALFORMED_EVIDENCE,1
+TV11_LATE,"{""before_deadline"":false}",LATE_OR_MALFORMED_EVIDENCE,LATE_OR_MALFORMED_EVIDENCE,1
+TV12_POLICY_VERSION,"{""policy_version_match"":false}",POLICY_VERSION_MISMATCH,POLICY_VERSION_MISMATCH,1
+TV13_LEDGER_UNAVAILABLE,"{""ledger_available"":false}",LEDGER_UNAVAILABLE,LEDGER_UNAVAILABLE,1
+TV14_IDEMPOTENT_SAME_DIGEST,"{""same_digest"":true,""same_key"":true,""two_calls"":true}",IDEMPOTENT_REPLAY,IDEMPOTENT_REPLAY,1
+TV15_IDEMPOTENCY_CONFLICT,"{""same_digest"":false,""same_key"":true,""two_calls"":true}",IDEMPOTENCY_CONFLICT,IDEMPOTENCY_CONFLICT,1

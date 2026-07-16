@@ -1,0 +1,11 @@
+﻿regime,comparison,n_paired_seeds,mean_difference_pct_points,sd_difference_pct_points,exact_two_sided_sign_flip_p,holm_adjusted_p,all_differences_positive,scope
+Edge-IIoTset-calibrated,TrustAgent-IIoT vs Local-only,10,5.473431148109647,0.3119436764992656,0.001953125,0.009765625,True,calibrated executable simulation only; not physical-deployment inference
+Edge-IIoTset-calibrated,TrustAgent-IIoT vs FedAvg,10,3.29669781023878,0.2816984678151395,0.001953125,0.009765625,True,calibrated executable simulation only; not physical-deployment inference
+Edge-IIoTset-calibrated,TrustAgent-IIoT vs FedProx,10,2.906203430170824,0.29569588822103304,0.001953125,0.009765625,True,calibrated executable simulation only; not physical-deployment inference
+Edge-IIoTset-calibrated,TrustAgent-IIoT vs FD-only,10,1.404603721375969,0.30816717519073344,0.001953125,0.009765625,True,calibrated executable simulation only; not physical-deployment inference
+Edge-IIoTset-calibrated,TrustAgent-IIoT vs BC-FL,10,1.065876162504327,0.17953753433032144,0.001953125,0.009765625,True,calibrated executable simulation only; not physical-deployment inference
+TON_IoT-calibrated,TrustAgent-IIoT vs Local-only,10,6.115246577206152,0.3250426246533591,0.001953125,0.009765625,True,calibrated executable simulation only; not physical-deployment inference
+TON_IoT-calibrated,TrustAgent-IIoT vs FedAvg,10,3.861416201190572,0.36850565866530094,0.001953125,0.009765625,True,calibrated executable simulation only; not physical-deployment inference
+TON_IoT-calibrated,TrustAgent-IIoT vs FedProx,10,3.227384490217358,0.3677373410505054,0.001953125,0.009765625,True,calibrated executable simulation only; not physical-deployment inference
+TON_IoT-calibrated,TrustAgent-IIoT vs FD-only,10,1.7686839180840992,0.3242895403242094,0.001953125,0.009765625,True,calibrated executable simulation only; not physical-deployment inference
+TON_IoT-calibrated,TrustAgent-IIoT vs BC-FL,10,1.4040154120102528,0.2947301682965891,0.001953125,0.009765625,True,calibrated executable simulation only; not physical-deployment inference

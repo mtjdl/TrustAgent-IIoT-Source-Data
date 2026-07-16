@@ -1,0 +1,13 @@
+﻿method,n_clients,macro_f1_pct,round_time_s,evidence_status,f1_formula,time_formula,boundary
+FedAvg,5,96.7,22.0,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution
+FedAvg,20,95.728211504729,37.63157894736842,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution
+FedAvg,50,95.0858942476355,68.89473684210526,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution
+FedAvg,100,94.6,120.99999999999999,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution
+BC-FL,5,97.2,24.0,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution
+BC-FL,20,96.36703843262487,36.473684210526315,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution
+BC-FL,50,95.81648078368757,61.42105263157895,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution
+BC-FL,100,95.4,103.0,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution
+TrustAgent-IIoT,5,97.8,19.0,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution
+TrustAgent-IIoT,20,97.15214100315268,28.315789473684212,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution
+TrustAgent-IIoT,50,96.72392949842367,46.94736842105263,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution
+TrustAgent-IIoT,100,96.4,78.0,configured_model_estimate,F1(n)=F1(5)-k*ln(n/5); k=(F1(5)-F1(100))/ln(20),T(n)=T(5)+(T(100)-T(5))*(n-5)/95,analytic scaling model; only n=20 has event-level detector execution

@@ -1,0 +1,10 @@
+﻿method,bandwidth_kbps,macro_f1_pct,round_time_s,evidence_status,formula,boundary
+FD-only,64,95.9,29.8,configured_model_estimate,"y(b)=a+c/sqrt(b), with endpoints declared at 64 and 1000 kbps",analytic link-staleness model; not a packet-level radio or physical-link measurement
+FD-only,256,96.23466405256771,24.980837643025115,configured_model_estimate,"y(b)=a+c/sqrt(b), with endpoints declared at 64 and 1000 kbps",analytic link-staleness model; not a packet-level radio or physical-link measurement
+FD-only,1000,96.4,22.6,configured_model_estimate,"y(b)=a+c/sqrt(b), with endpoints declared at 64 and 1000 kbps",analytic link-staleness model; not a packet-level radio or physical-link measurement
+BC-FL,64,95.8,38.7,configured_model_estimate,"y(b)=a+c/sqrt(b), with endpoints declared at 64 and 1000 kbps",analytic link-staleness model; not a packet-level radio or physical-link measurement
+BC-FL,256,96.53626091564895,31.270458032997052,configured_model_estimate,"y(b)=a+c/sqrt(b), with endpoints declared at 64 and 1000 kbps",analytic link-staleness model; not a packet-level radio or physical-link measurement
+BC-FL,1000,96.9,27.6,configured_model_estimate,"y(b)=a+c/sqrt(b), with endpoints declared at 64 and 1000 kbps",analytic link-staleness model; not a packet-level radio or physical-link measurement
+TrustAgent-IIoT,64,96.5,34.5,configured_model_estimate,"y(b)=a+c/sqrt(b), with endpoints declared at 64 and 1000 kbps",analytic link-staleness model; not a packet-level radio or physical-link measurement
+TrustAgent-IIoT,256,97.37012653667601,25.12940652810439,configured_model_estimate,"y(b)=a+c/sqrt(b), with endpoints declared at 64 and 1000 kbps",analytic link-staleness model; not a packet-level radio or physical-link measurement
+TrustAgent-IIoT,1000,97.8,20.5,configured_model_estimate,"y(b)=a+c/sqrt(b), with endpoints declared at 64 and 1000 kbps",analytic link-staleness model; not a packet-level radio or physical-link measurement

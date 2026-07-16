@@ -1,0 +1,11 @@
+﻿check,observed,expected,pass
+evaluation_seed_list,11;29;47;71;101;131;173;211;257;307,11;29;47;71;101;131;173;211;257;307,1
+standard_seed_metric_rows,120,120,1
+policy_event_rows,432000,432000,1
+algorithm_branch_vectors,15,15,1
+coordinator_stage_order,600,600,1
+receipt_hash_chain_links,1,1,1
+subquorum_fail_closed_no_forced_admission,1,1,1
+convergence_rows,900,900,1
+ablation_rows,50,50,1
+synthetic_event_manifest_rows,800,800,1

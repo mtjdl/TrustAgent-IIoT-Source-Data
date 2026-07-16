@@ -1,0 +1,248 @@
+{
+  "artifact_status": "EXECUTABLE CALIBRATED SIMULATION - NOT RAW-DATA TRAINING OR A PHYSICAL TESTBED",
+  "run_id": "trustagent-sim-20260715T112504Z",
+  "created_utc": "2026-07-15T11:25:21.533319+00:00",
+  "script": "work/executable_revision/simulate_trustagent.py",
+  "script_sha256": "88fa401784936501756c091a83a1b36985fd42afd59601adab08fdf3879f5d67",
+  "python": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26120-SP0",
+  "host_hardware": {
+    "machine": "AMD64",
+    "processor": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+    "logical_cpu_count": 16,
+    "total_ram_bytes": 16888131584,
+    "total_ram_gib": 15.728,
+    "role": "host that executed the Python simulator only; not a Raspberry Pi, IIoT device, Hyperledger Fabric node, or physical testbed"
+  },
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "not installed; not used",
+    "scikit-learn": "not installed; not used"
+  },
+  "seeds": [
+    11,
+    29,
+    47,
+    71,
+    101,
+    131,
+    173,
+    211,
+    257,
+    307
+  ],
+  "calibration_seeds": [
+    401,
+    419,
+    443,
+    467,
+    503,
+    541
+  ],
+  "calibration_protocol": "Figure-constrained scenario calibration used only disjoint calibration seeds. Mechanism parameters were frozen before the listed evaluation seeds were executed; no seed-wise output scaling or target-mean resampling is performed.",
+  "calibration_objective": "For each Edge method, minimize squared error in calibration-seed mean accuracy and macro-F1 versus the retained Figure 5 endpoint; then select risk-channel noise by absolute AUC error. Coarse grid followed by local refinement. TON_IoT is not included in this objective.",
+  "frozen_calibration_parameters": {
+    "representation_noise": {
+      "Local-only": 0.55,
+      "FedAvg": 0.45,
+      "FedProx": 0.44,
+      "FD-only": 0.31,
+      "BC-FL": 0.3,
+      "TrustAgent-IIoT": 0.16
+    },
+    "class_prior_bias": {
+      "Local-only": 1.41,
+      "FedAvg": 1.53,
+      "FedProx": 0.57,
+      "FD-only": 1.32,
+      "BC-FL": 0.96,
+      "TrustAgent-IIoT": 0.42
+    },
+    "risk_channel_noise": {
+      "Local-only": 0.31,
+      "FedAvg": 0.3,
+      "FedProx": 0.26,
+      "FD-only": 0.28,
+      "BC-FL": 0.28,
+      "TrustAgent-IIoT": 0.25
+    }
+  },
+  "regimes": {
+    "Edge-IIoTset-calibrated": {
+      "base_prior": [
+        0.25,
+        0.14,
+        0.14,
+        0.13,
+        0.12,
+        0.11,
+        0.11
+      ],
+      "dirichlet_concentration": 18.0,
+      "centroid_scale": 3.2,
+      "event_noise": 0.8,
+      "client_shift": 0.19,
+      "hard_class_multiplier": [
+        0.95,
+        0.97,
+        0.99,
+        1.0,
+        1.02,
+        1.04,
+        1.07
+      ]
+    },
+    "TON_IoT-calibrated": {
+      "base_prior": [
+        0.28,
+        0.13,
+        0.13,
+        0.12,
+        0.12,
+        0.11,
+        0.11
+      ],
+      "dirichlet_concentration": 16.0,
+      "centroid_scale": 3.15,
+      "event_noise": 0.81,
+      "client_shift": 0.2,
+      "hard_class_multiplier": [
+        0.96,
+        0.98,
+        1.0,
+        1.02,
+        1.04,
+        1.06,
+        1.09
+      ]
+    }
+  },
+  "methods": [
+    "Local-only",
+    "FedAvg",
+    "FedProx",
+    "FD-only",
+    "BC-FL",
+    "TrustAgent-IIoT"
+  ],
+  "method_mechanisms": {
+    "Local-only": "Per-client nearest prototypes; absent classes use a training-only fallback; no cross-client fusion.",
+    "FedAvg": "Class-wise sample-weighted average of all client prototypes.",
+    "FedProx": "FedAvg prototype regularized toward each client's clean local prototype at inference.",
+    "FD-only": "Coordinate-median knowledge prototypes followed by 0.08-step evidence quantization.",
+    "BC-FL": "Identity-admitted coordinate-trimmed prototype aggregation plus a coarse policy receipt.",
+    "TrustAgent-IIoT": "Median-reference trust scoring, coverage-aware rejection, reliability-weighted compact fusion, policy gate, and narrow audit receipt."
+  },
+  "sample_design": {
+    "clients": 20,
+    "classes": 7,
+    "features": 12,
+    "train_events_per_client_per_seed": 360,
+    "test_events_per_client_per_seed": 180,
+    "split": "Within each generated client: 360 training events and an independently generated 180-event test partition; no event crosses splits.",
+    "non_iid": "Client class probabilities are drawn once per regime/seed from a Dirichlet distribution and reused for that client's independent train/test draws."
+  },
+  "preprocessing": "Feature-wise z-standardization fitted on all generated training events for one regime/seed and applied unchanged to its test events. No test statistic enters fitting.",
+  "synthetic_event_reconstruction": "Every generated standardized train/test partition is deterministically reconstructable from this script and the listed seeds. synthetic_event_manifest.csv records the row count, feature count, class counts, and SHA-256 over little-endian float64 features followed by little-endian int64 labels for verification.",
+  "network_model": {
+    "rounds": 30,
+    "effective_shared_uplink_bits_per_second": 5000000,
+    "payload_bytes_per_client": {
+      "Local-only": 4000,
+      "FedAvg": 428500,
+      "FedProx": 419000,
+      "FD-only": 92500,
+      "BC-FL": 249500,
+      "TrustAgent-IIoT": 73000
+    },
+    "stage_seconds": {
+      "Local-only": {
+        "local_compute": 7.72,
+        "aggregation": 0.502
+      },
+      "FedAvg": {
+        "local_compute": 13.2,
+        "aggregation": 5.158
+      },
+      "FedProx": {
+        "local_compute": 14.05,
+        "aggregation": 5.312
+      },
+      "FD-only": {
+        "local_compute": 13.85,
+        "distillation": 3.82,
+        "aggregation": 2.0
+      },
+      "BC-FL": {
+        "local_compute": 13.45,
+        "aggregation": 3.1,
+        "ledger_receipt": 3.066
+      },
+      "TrustAgent-IIoT": {
+        "local_compute": 12.55,
+        "trust_filter": 1.78,
+        "fusion": 1.1,
+        "policy": 1.32,
+        "ledger_receipt": 1.404
+      }
+    },
+    "meaning": "single-bottleneck deterministic discrete-event queue with 20 serialized uploads"
+  },
+  "ledger_model": {
+    "status": "Fabric-like discrete-event model; Hyperledger Fabric software was not executed",
+    "organizations": 3,
+    "peers_per_organization": 2,
+    "ordering_service": "simulated single logical orderer",
+    "endorsement_policy": "simulated 2-of-3 organization receipt",
+    "max_batch_transactions": 10,
+    "batch_timeout_seconds": 0.05,
+    "service_seconds": "0.292 + 0.003 * transactions in block",
+    "load_rates_tx_per_min": [
+      10,
+      50,
+      100,
+      200
+    ],
+    "simulated_minutes_per_seed_and_rate": 20
+  },
+  "policy_model": "Per-event high-impact proposal, role clearance, proportionality ground truth, noisy policy-evidence signal, and allow/review/deny decision; confusion rows are exported individually.",
+  "coordinator_state_machine": {
+    "rounds_per_regime_seed": 30,
+    "ordered_stages": [
+      "Schedule",
+      "ProvisionalReference",
+      "TrustFilter",
+      "Fuse",
+      "Policy",
+      "Commit"
+    ],
+    "persistent_state": "R_i^t initialized to 0.75 and updated after every round from evidence consistency; unscheduled identities drift toward neutral 0.50",
+    "quorum": "ceil(0.35 x scheduled clients)",
+    "empty_or_subquorum_behavior": "fail closed; no fusion/action; commit a chained failure receipt",
+    "receipt_chain": "SHA-256 over canonical JSON including previous receipt hash, policy version, accepted identities, decision, and reputation digest"
+  },
+  "attack_model": "At 10/20/30% malicious participation, deterministic seed-selected clients send label-shifted, noisy prototypes; TrustAgent filters by median-reference distance and class coverage.",
+  "qa_separation": "Historical Edge endpoints define the squared-error calibration objective on CALIBRATION_SEEDS. The resulting representation-noise, class-prior-bias, and risk-channel parameters are frozen before SEEDS are run. No evaluation result is rescaled and no target mean/SD is sampled. TON_IoT uses the frozen Edge parameters without TON target fitting.",
+  "limitations": [
+    "No Edge-IIoTset or TON_IoT record is loaded; regime names denote calibrated synthetic assumptions only.",
+    "No neural network, containerized IIoT stack, radio link, Hyperledger Fabric deployment, or physical device is executed.",
+    "Gaussian/nonlinear telemetry, prototype aggregation, and label-shift attacks are abstractions and do not establish external validity.",
+    "Seed-level tests quantify repeatability inside this simulator and cannot support physical-deployment inference."
+  ],
+  "figure_consistency_pass": false,
+  "algorithm_test_vector_pass": true,
+  "internal_qa_pass": true,
+  "figure_evidence_map": {
+    "Fig5": "seed_metrics.csv; observed_in_simulator",
+    "Fig6": "network_ledger_events.csv; observed_in_simulator from byte/stage discrete events",
+    "Fig7": "convergence_round_metrics.csv; observed_in_simulator from incremental prefix refits",
+    "Fig8": "seed_metrics.csv rows with malicious_fraction; observed_in_simulator",
+    "Fig9": "fabric_like_transaction_events.csv and ledger_load_summary.csv; observed_in_simulator, Fabric-like queue only",
+    "Fig10": "ablation_metrics.csv; observed_in_simulator detector/policy branch bypass plus configured payload schema",
+    "Fig11": "client_count_sensitivity.csv; configured_model_estimate",
+    "Fig12": "bandwidth_sensitivity.csv; configured_model_estimate",
+    "Fig13": "same seed_metrics.csv rows as Fig5; no independent evidence",
+    "Fig14": "resource_model_results.csv; configured_model_estimate, not instrumented hardware",
+    "Fig15": "not generated by this simulator; literature-context panel requires source-by-source metric harmonization"
+  }
+}
