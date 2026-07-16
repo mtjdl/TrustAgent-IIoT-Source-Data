@@ -42,4 +42,9 @@ Use `run_manifest.json` to verify individual files. The generated outputs suppor
 
 ## License
 
-No reuse license has been assigned yet. All rights are reserved unless a license is added by the repository owner.
+The repository uses a dual licence:
+
+- Data, validation outputs, metadata, and documentation are licensed under the [Creative Commons Attribution 4.0 International License](LICENSE-DATA.md).
+- Python source files are licensed under the [MIT License](LICENSE-CODE).
+
+When reusing the package, cite the archived release described in [`CITATION.cff`](CITATION.cff).

@@ -1,0 +1,24 @@
+{
+  "title": "TrustAgent-IIoT source data and reproducibility package",
+  "upload_type": "dataset",
+  "version": "1.0.0",
+  "publication_date": "2026-07-16",
+  "description": "Source data, executable calibrated simulation code, validation outputs, and reproducibility metadata associated with the TrustAgent-IIoT manuscript. The package reports results from an executable calibrated simulation and does not contain raw Edge-IIoTset or TON_IoT records, a Hyperledger Fabric deployment, or measurements from a physical IIoT testbed.",
+  "creators": [
+    {
+      "name": "CHAI, TING",
+      "affiliation": "Tongmyong University",
+      "orcid": "0009-0006-3738-3000"
+    }
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "keywords": [
+    "Industrial Internet of Things",
+    "federated learning",
+    "intrusion detection",
+    "trust management",
+    "reproducibility"
+  ]
+}

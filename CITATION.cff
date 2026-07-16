@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this dataset and reproducibility package, please cite the archived release."
+title: "TrustAgent-IIoT source data and reproducibility package"
+type: dataset
+version: 1.0.0
+date-released: 2026-07-16
+abstract: >-
+  Source data, executable calibrated simulation code, validation outputs, and
+  reproducibility metadata associated with the TrustAgent-IIoT manuscript.
+authors:
+  - family-names: "CHAI"
+    given-names: "TING"
+    affiliation: "Tongmyong University"
+    orcid: "https://orcid.org/0009-0006-3738-3000"
+repository-code: "https://github.com/mtjdl/TrustAgent-IIoT-Source-Data"
+url: "https://github.com/mtjdl/TrustAgent-IIoT-Source-Data"
+keywords:
+  - Industrial Internet of Things
+  - federated learning
+  - intrusion detection
+  - trust management
+  - reproducibility
+license: CC-BY-4.0
